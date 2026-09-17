@@ -1,0 +1,103 @@
+{
+  "info": {
+    "nama_hotel": "紋別プリンスホテル / Mombetsu Prince Hotel",
+    "jam": "6:30 – 9:30（ラストオーダー 9:00）",
+    "jam_en": "6:30 – 9:30 (last order 9:00)",
+    "tempat": "1F レストラン",
+    "tempat_en": "1st floor restaurant",
+    "harga": "ご宿泊のお客様は無料",
+    "harga_en": "Free for staying guests",
+    "catatan": "アレルギーがございましたら、スタッフまでお申し付けください。",
+    "catatan_en": "Please tell our staff if you have any food allergies.",
+    "update": "2026-09-18"
+  },
+  "alergi_legenda": [
+    { "kode": "えび", "en": "Shrimp" },
+    { "kode": "かに", "en": "Crab" },
+    { "kode": "くるみ", "en": "Walnut" },
+    { "kode": "小麦", "en": "Wheat" },
+    { "kode": "そば", "en": "Buckwheat" },
+    { "kode": "卵", "en": "Egg" },
+    { "kode": "乳", "en": "Milk" },
+    { "kode": "落花生", "en": "Peanut" }
+  ],
+  "kategori": [
+    {
+      "id": "daily",
+      "nama_jp": "本日の日替わり",
+      "nama_en": "Today's Specials",
+      "berubah_harian": true,
+      "items": [
+        {
+          "nama_jp": "焼きほっけ",
+          "nama_en": "Grilled Atka mackerel",
+          "desc_jp": "北海道の定番。脂がのっています。",
+          "desc_en": "Hokkaido classic, nicely fatty.",
+          "alergi": [],
+          "tag": ["北海道"]
+        },
+        {
+          "nama_jp": "ホタテのバター焼き",
+          "nama_en": "Butter-grilled scallops",
+          "desc_jp": "オホーツク海産のホタテ。",
+          "desc_en": "Scallops from the Sea of Okhotsk.",
+          "alergi": ["乳"],
+          "tag": ["北海道", "名物"]
+        },
+        {
+          "nama_jp": "いくらごはん",
+          "nama_en": "Salmon roe over rice",
+          "desc_jp": "小鉢でご用意しています。",
+          "desc_en": "Served in a small bowl.",
+          "alergi": [],
+          "tag": []
+        }
+      ]
+    },
+    {
+      "id": "washoku",
+      "nama_jp": "和食",
+      "nama_en": "Japanese",
+      "berubah_harian": false,
+      "items": [
+        { "nama_jp": "白ごはん", "nama_en": "Steamed rice", "desc_jp": "国産米", "desc_en": "Japanese rice", "alergi": [], "tag": [] },
+        { "nama_jp": "味噌汁", "nama_en": "Miso soup", "desc_jp": "", "desc_en": "", "alergi": ["小麦"], "tag": [] },
+        { "nama_jp": "焼き鮭", "nama_en": "Grilled salmon", "desc_jp": "", "desc_en": "", "alergi": [], "tag": [] },
+        { "nama_jp": "納豆", "nama_en": "Natto (fermented soybeans)", "desc_jp": "", "desc_en": "", "alergi": [], "tag": [] },
+        { "nama_jp": "卵焼き", "nama_en": "Rolled omelette", "desc_jp": "", "desc_en": "", "alergi": ["卵"], "tag": [] },
+        { "nama_jp": "漬物", "nama_en": "Pickles", "desc_jp": "", "desc_en": "", "alergi": [], "tag": [] }
+      ]
+    },
+    {
+      "id": "yoshoku",
+      "nama_jp": "洋食",
+      "nama_en": "Western",
+      "berubah_harian": false,
+      "items": [
+        { "nama_jp": "スクランブルエッグ", "nama_en": "Scrambled eggs", "desc_jp": "", "desc_en": "", "alergi": ["卵", "乳"], "tag": [] },
+        { "nama_jp": "ソーセージ", "nama_en": "Sausage", "desc_jp": "", "desc_en": "", "alergi": ["小麦"], "tag": [] },
+        { "nama_jp": "トースト", "nama_en": "Toast", "desc_jp": "バター・ジャム付き", "desc_en": "With butter and jam", "alergi": ["小麦", "乳"], "tag": [] },
+        { "nama_jp": "サラダ", "nama_en": "Salad", "desc_jp": "ドレッシング 2 種", "desc_en": "Two kinds of dressing", "alergi": [], "tag": ["ベジタリアン"] },
+        { "nama_jp": "ヨーグルト", "nama_en": "Yogurt", "desc_jp": "", "desc_en": "", "alergi": ["乳"], "tag": [] },
+        { "nama_jp": "コーンスープ", "nama_en": "Corn soup", "desc_jp": "", "desc_en": "", "alergi": ["乳", "小麦"], "tag": [] }
+      ]
+    },
+    {
+      "id": "drink",
+      "nama_jp": "お飲み物",
+      "nama_en": "Drinks",
+      "berubah_harian": false,
+      "items": [
+        { "nama_jp": "コーヒー", "nama_en": "Coffee", "desc_jp": "ホット／アイス", "desc_en": "Hot / iced", "alergi": [], "tag": [] },
+        { "nama_jp": "紅茶", "nama_en": "Tea", "desc_jp": "ホット／アイス", "desc_en": "Hot / iced", "alergi": [], "tag": [] },
+        { "nama_jp": "オレンジジュース", "nama_en": "Orange juice", "desc_jp": "", "desc_en": "", "alergi": [], "tag": [] },
+        { "nama_jp": "牛乳", "nama_en": "Milk", "desc_jp": "", "desc_en": "", "alergi": ["乳"], "tag": [] },
+        { "nama_jp": "緑茶", "nama_en": "Green tea", "desc_jp": "セルフサービス", "desc_en": "Self service", "alergi": [], "tag": [] }
+      ]
+    }
+  ],
+  "kurasi": [
+    { "label_jp": "ハラール対応可", "label_en": "Halal-friendly options available", "isian_jp": "スタッフにお申し付けください", "isian_en": "Please ask our staff" },
+    { "label_jp": "ベジタリアン", "label_en": "Vegetarian", "isian_jp": "サラダ・白ごはん・味噌汁など", "isian_en": "Salad, rice, miso soup, etc." }
+  ]
+}

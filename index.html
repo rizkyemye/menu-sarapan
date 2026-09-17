@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#0f2a43">
+<title>朝食メニュー · Breakfast Menu</title>
+<link rel="stylesheet" href="menu.css">
+</head>
+<body>
+
+  <!-- tombol bahasa -->
+  <div class="bahasa" id="pilihBahasa">
+    <button data-bhs="jp" class="aktif">日本語</button>
+    <button data-bhs="en">English</button>
+  </div>
+
+  <div id="isiMenu">
+    <div class="wadah" style="padding-top:40px;text-align:center;color:#607a90">読み込み中… / Loading…</div>
+  </div>
+
+  <script src="menu-app.js"></script>
+  <script>
+  (function () {
+    "use strict";
+    var bhs = MenuSarapan.bahasaAwal();
+    var data = null;
+
+    function gambar() {
+      if (!data) return;
+      MenuSarapan.renderTamu(document.getElementById("isiMenu"), data, bhs);
+      document.documentElement.lang = bhs === "en" ? "en" : "ja";
+      document.querySelectorAll("#pilihBahasa button").forEach(function (b) {
+        b.classList.toggle("aktif", b.dataset.bhs === bhs);
+      });
+    }
+
+    document.querySelectorAll("#pilihBahasa button").forEach(function (b) {
+      b.addEventListener("click", function () {
+        bhs = b.dataset.bhs;
+        MenuSarapan.simpanBahasa(bhs);
+        gambar();
+      });
+    });
+
+    MenuSarapan.muat().then(function (d) {
+      if (!d) {
+        document.getElementById("isiMenu").innerHTML =
+          '<div class="wadah"><div class="catatan">メニューを読み込めませんでした 😢<br>menu.json がアップロードされているか確認してください。</div></div>';
+        return;
+      }
+      data = d;
+      gambar();
+    });
+
+    // data di-refresh tiap 30 menit (kalau menu harian diganti, tamu langsung lihat)
+    setInterval(function () {
+      MenuSarapan.muat().then(function (d) { if (d) { data = d; gambar(); } });
+    }, 30 * 60 * 1000);
+
+    // offline (service worker)
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", function () {
+        navigator.serviceWorker.register("sw.js").catch(function () {});
+      });
+    }
+  })();
+  </script>
+</body>
+</html>
