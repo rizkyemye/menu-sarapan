@@ -73,6 +73,45 @@
       if (kat.berubah_harian) {
         html += '<div class="tanggal">' + esc(tanggalHariIni()) + " のご提供</div>";
       }
+      // ---- grup 日替わり (1 grup = 1 pilihan per hari) ----
+      if (kat.grup && kat.grup.length) {
+        if (kat.catatan_jp || kat.catatan_en) {
+          html += '<p class="grup-catatan">' + esc(bhs === "en" ? kat.catatan_en : kat.catatan_jp) + "</p>";
+        }
+        kat.grup.forEach(function (g) {
+          const pilih = g.hari_ini ? (g.items || []).filter(function (x) { return x.nama_jp === g.hari_ini; })[0] : null;
+          const lain = (g.items || []).filter(function (x) { return !pilih || x.nama_jp !== pilih.nama_jp; });
+          html += '<div class="grup">';
+          html += '<div class="grup-judul">' + esc(bhs === "en" ? g.nama_en : g.nama_jp) +
+                  '<span class="en">' + esc(bhs === "en" ? g.nama_jp : g.nama_en) + "</span></div>";
+          if (pilih) {
+            const al = (pilih.alergi || []).map(function (a) { return '<span class="alergi">' + esc(a) + "</span>"; }).join("");
+            html += '<div class="item"><div>' +
+              '<div class="nama">' + esc(teks(pilih, "nama", bhs)) +
+              '<span class="en">' + esc(teks(pilih, "nama", bhs === "en" ? "jp" : "en")) + "</span></div>" +
+              "</div>" +
+              '<div class="kanan"><span class="badge-kini">' + (bhs === "en" ? "TODAY" : "本日") + "</span>" +
+              al + "</div></div>";
+          } else {
+            html += '<div class="item"><div><div class="keterangan">' +
+              (bhs === "en" ? "One of the following is served today:" : "本日はこの中から1品ご用意しています：") +
+              "</div></div></div>";
+          }
+          if (lain.length) {
+            html += '<div class="grup-lain">' +
+              (bhs === "en" ? "Also available on other days: " : "他の日：") +
+              lain.map(function (x) {
+                const nm = teks(x, "nama", bhs);
+                const al = (x.alergi || []).length ? "（" + x.alergi.join("・") + "）" : "";
+                return esc(nm) + al;
+              }).join(" ／ ") + "</div>";
+          }
+          html += "</div>";
+        });
+        html += "</section>";
+        return;
+      }
+
       (kat.items || []).forEach(function (it) {
         const alergi = (it.alergi || []).map(function (a) {
           return '<span class="alergi">' + esc(a) + "</span>";
@@ -143,6 +182,9 @@
         judul: bhs === "en" ? kat.nama_en : kat.nama_jp,
         judul_en: bhs === "en" ? kat.nama_jp : kat.nama_en,
         harian: kat.berubah_harian,
+        grup: kat.grup || null,
+        catatan_jp: kat.catatan_jp || "",
+        catatan_en: kat.catatan_en || "",
         items: kat.items || []
       });
     });
@@ -173,6 +215,24 @@
           return '<div class="kotak-item"><div class="nm">' + esc(bhs === "en" ? a.en : a.kode) + "</div></div>";
         }).join("") + "</div>";
       html += '<div class="layar-bawah"><div>' + esc(bhs === "en" ? data.info.catatan_en : data.info.catatan) + "</div></div>";
+    } else if (slide.grup && slide.grup.length) {
+      html += '<div class="layar-isi" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr))">' +
+        slide.grup.map(function (g) {
+          const pilih = g.hari_ini ? (g.items || []).filter(function (x) { return x.nama_jp === g.hari_ini; })[0] : null;
+          const lain = (g.items || []).filter(function (x) { return !pilih || x.nama_jp !== pilih.nama_jp; })
+            .map(function (x) { return teks(x, "nama", bhs); });
+          return '<div class="kotak-item">' +
+            '<div class="grup-nama">' + esc(bhs === "en" ? g.nama_en : g.nama_jp) + "</div>" +
+            (pilih
+              ? '<div class="nm">' + esc(teks(pilih, "nama", bhs)) + "</div>" +
+                '<div class="en">' + esc(teks(pilih, "nama", bhs === "en" ? "jp" : "en")) + "</div>"
+              : '<div class="en">' + (bhs === "en" ? "1 selection daily" : "1品を日替わりで") + "</div>") +
+            (lain.length ? '<div class="grup-lain-layar">' + esc(lain.join(" ／ ")) + "</div>" : "") +
+            "</div>";
+        }).join("") + "</div>";
+      html += '<div class="layar-bawah"><div>' +
+        esc(bhs === "en" ? (slide.catatan_en || "Each group changes daily.") : (slide.catatan_jp || "日替わりでご用意しています。")) +
+        "</div></div>";
     } else {
       html += '<div class="layar-isi">' + (slide.items || []).map(function (it) {
         const alergi = (it.alergi || []).map(function (a) {

@@ -173,3 +173,21 @@ body {
 @media (max-width: 480px) {
   .bahasa { top: auto; bottom: calc(env(safe-area-inset-bottom) + 12px); right: 12px; }
 }
+
+/* ---------- grup 日替わり ---------- */
+.grup-catatan { font-size: .84rem; color: var(--redup); margin: 2px 0 8px; }
+.grup { border-top: 1px dashed var(--garis); padding: 8px 0 10px; }
+.grup:first-of-type { border-top: 0; }
+.grup-judul {
+  font-size: .82rem; font-weight: 700; color: var(--navy-soft);
+  letter-spacing: .04em; text-transform: uppercase; margin-bottom: 2px;
+}
+.grup-judul .en { text-transform: none; letter-spacing: 0; color: var(--redup); font-weight: 500; margin-left: 6px; }
+.grup .item { padding: 4px 0; border-top: 0; }
+.badge-kini {
+  display: inline-block; background: var(--emas); color: #26210b; font-size: .68rem;
+  font-weight: 800; border-radius: 999px; padding: 3px 9px; margin-right: 6px; letter-spacing: .06em;
+}
+.grup-lain { font-size: .78rem; color: var(--redup); margin-top: 6px; line-height: 1.5; }
+.grup-nama { font-size: .82rem; letter-spacing: .08em; text-transform: uppercase; opacity: .75; margin-bottom: 2px; }
+.grup-lain-layar { font-size: clamp(.7rem, 1.2vw, .9rem); opacity: .65; margin-top: 4px; }

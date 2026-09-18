@@ -7,19 +7,44 @@
     "tempat_en": "1st floor restaurant",
     "harga": "ご宿泊のお客様は無料",
     "harga_en": "Free for staying guests",
-    "catatan": "アレルギーがございましたら、スタッフまでお申し付けください。",
-    "catatan_en": "Please tell our staff if you have any food allergies.",
-    "update": "2026-09-18"
+    "catatan": "アレルギー表示は目安です。詳しくはスタッフまでお申し付けください。",
+    "catatan_en": "Allergen information is a guide. Please ask our staff for details.",
+    "update": "2026-09-18",
+    "catatan_internal": "※ 時間・場所・料金は仮。厨房で確認してから公開すること。"
   },
   "alergi_legenda": [
-    { "kode": "えび", "en": "Shrimp" },
-    { "kode": "かに", "en": "Crab" },
-    { "kode": "くるみ", "en": "Walnut" },
-    { "kode": "小麦", "en": "Wheat" },
-    { "kode": "そば", "en": "Buckwheat" },
-    { "kode": "卵", "en": "Egg" },
-    { "kode": "乳", "en": "Milk" },
-    { "kode": "落花生", "en": "Peanut" }
+    {
+      "kode": "えび",
+      "en": "Shrimp"
+    },
+    {
+      "kode": "かに",
+      "en": "Crab"
+    },
+    {
+      "kode": "くるみ",
+      "en": "Walnut"
+    },
+    {
+      "kode": "小麦",
+      "en": "Wheat"
+    },
+    {
+      "kode": "そば",
+      "en": "Buckwheat"
+    },
+    {
+      "kode": "卵",
+      "en": "Egg"
+    },
+    {
+      "kode": "乳",
+      "en": "Milk"
+    },
+    {
+      "kode": "落花生",
+      "en": "Peanut"
+    }
   ],
   "kategori": [
     {
@@ -27,30 +52,234 @@
       "nama_jp": "本日の日替わり",
       "nama_en": "Today's Specials",
       "berubah_harian": true,
-      "items": [
+      "catatan_jp": "毎日1種類ずつご用意しています（日によって変わります）",
+      "catatan_en": "One selection from each group is served each day (changes daily)",
+      "grup": [
         {
-          "nama_jp": "焼きほっけ",
-          "nama_en": "Grilled Atka mackerel",
-          "desc_jp": "北海道の定番。脂がのっています。",
-          "desc_en": "Hokkaido classic, nicely fatty.",
-          "alergi": [],
-          "tag": ["北海道"]
+          "nama_jp": "丼もの",
+          "nama_en": "Rice bowl",
+          "hari_ini": "牛丼",
+          "items": [
+            {
+              "nama_jp": "牛丼",
+              "nama_en": "Beef rice bowl",
+              "desc_jp": "",
+              "desc_en": "",
+              "alergi": [
+                "小麦"
+              ],
+              "tag": []
+            },
+            {
+              "nama_jp": "親子丼",
+              "nama_en": "Chicken & egg rice bowl",
+              "desc_jp": "",
+              "desc_en": "",
+              "alergi": [
+                "卵",
+                "小麦"
+              ],
+              "tag": []
+            },
+            {
+              "nama_jp": "豚丼",
+              "nama_en": "Pork rice bowl",
+              "desc_jp": "",
+              "desc_en": "",
+              "alergi": [
+                "小麦"
+              ],
+              "tag": []
+            }
+          ]
         },
         {
-          "nama_jp": "ホタテのバター焼き",
-          "nama_en": "Butter-grilled scallops",
-          "desc_jp": "オホーツク海産のホタテ。",
-          "desc_en": "Scallops from the Sea of Okhotsk.",
-          "alergi": ["乳"],
-          "tag": ["北海道", "名物"]
+          "nama_jp": "麺・煮物",
+          "nama_en": "Noodles & simmered",
+          "hari_ini": "焼きそば",
+          "items": [
+            {
+              "nama_jp": "焼きそば",
+              "nama_en": "Fried noodles",
+              "desc_jp": "",
+              "desc_en": "",
+              "alergi": [
+                "小麦"
+              ],
+              "tag": []
+            },
+            {
+              "nama_jp": "筑前煮",
+              "nama_en": "Simmered chicken and root vegetables",
+              "desc_jp": "",
+              "desc_en": "",
+              "alergi": [],
+              "tag": []
+            },
+            {
+              "nama_jp": "肉じゃが",
+              "nama_en": "Simmered meat and potatoes",
+              "desc_jp": "",
+              "desc_en": "",
+              "alergi": [],
+              "tag": [
+                "北海道"
+              ]
+            }
+          ]
         },
         {
-          "nama_jp": "いくらごはん",
-          "nama_en": "Salmon roe over rice",
-          "desc_jp": "小鉢でご用意しています。",
-          "desc_en": "Served in a small bowl.",
-          "alergi": [],
-          "tag": []
+          "nama_jp": "サラダ",
+          "nama_en": "Salad",
+          "hari_ini": "ポテトサラダ",
+          "items": [
+            {
+              "nama_jp": "ポテトサラダ",
+              "nama_en": "Potato salad",
+              "desc_jp": "",
+              "desc_en": "",
+              "alergi": [
+                "卵"
+              ],
+              "tag": []
+            },
+            {
+              "nama_jp": "マカロニサラダ",
+              "nama_en": "Macaroni salad",
+              "desc_jp": "",
+              "desc_en": "",
+              "alergi": [
+                "小麦",
+                "卵"
+              ],
+              "tag": []
+            }
+          ]
+        },
+        {
+          "nama_jp": "豆腐",
+          "nama_en": "Tofu",
+          "hari_ini": "寄せ豆腐",
+          "items": [
+            {
+              "nama_jp": "寄せ豆腐",
+              "nama_en": "Soft tofu",
+              "desc_jp": "",
+              "desc_en": "",
+              "alergi": [],
+              "tag": [
+                "ベジタリアン"
+              ]
+            },
+            {
+              "nama_jp": "冷奴",
+              "nama_en": "Chilled tofu",
+              "desc_jp": "",
+              "desc_en": "",
+              "alergi": [],
+              "tag": [
+                "ベジタリアン"
+              ]
+            }
+          ]
+        },
+        {
+          "nama_jp": "和え物",
+          "nama_en": "Small side",
+          "hari_ini": "ゴマ昆布",
+          "items": [
+            {
+              "nama_jp": "ゴマ昆布",
+              "nama_en": "Sesame kelp",
+              "desc_jp": "",
+              "desc_en": "",
+              "alergi": [],
+              "tag": [
+                "北海道"
+              ]
+            },
+            {
+              "nama_jp": "ほうれん草のおひたし",
+              "nama_en": "Boiled spinach",
+              "desc_jp": "",
+              "desc_en": "",
+              "alergi": [],
+              "tag": [
+                "ベジタリアン"
+              ]
+            }
+          ]
+        },
+        {
+          "nama_jp": "小鉢",
+          "nama_en": "Small dish",
+          "hari_ini": "小松菜のおひたし",
+          "items": [
+            {
+              "nama_jp": "小松菜のおひたし",
+              "nama_en": "Boiled komatsuna greens",
+              "desc_jp": "",
+              "desc_en": "",
+              "alergi": [],
+              "tag": [
+                "ベジタリアン"
+              ]
+            },
+            {
+              "nama_jp": "ひじきの煮物",
+              "nama_en": "Simmered hijiki seaweed",
+              "desc_jp": "",
+              "desc_en": "",
+              "alergi": [],
+              "tag": []
+            },
+            {
+              "nama_jp": "きんぴらごぼう",
+              "nama_en": "Braised burdock and carrot",
+              "desc_jp": "",
+              "desc_en": "",
+              "alergi": [],
+              "tag": []
+            }
+          ]
+        },
+        {
+          "nama_jp": "その日のお料理",
+          "nama_en": "Today's dish",
+          "hari_ini": "カレーライス",
+          "items": [
+            {
+              "nama_jp": "カレーライス",
+              "nama_en": "Curry and rice",
+              "desc_jp": "",
+              "desc_en": "",
+              "alergi": [
+                "小麦",
+                "乳"
+              ],
+              "tag": []
+            },
+            {
+              "nama_jp": "スパゲティ",
+              "nama_en": "Spaghetti",
+              "desc_jp": "",
+              "desc_en": "",
+              "alergi": [
+                "小麦"
+              ],
+              "tag": []
+            },
+            {
+              "nama_jp": "大豆ミートの炒め物",
+              "nama_en": "Stir-fried soy meat",
+              "desc_jp": "",
+              "desc_en": "",
+              "alergi": [],
+              "tag": [
+                "ベジタリアン"
+              ]
+            }
+          ]
         }
       ]
     },
@@ -60,26 +289,565 @@
       "nama_en": "Japanese",
       "berubah_harian": false,
       "items": [
-        { "nama_jp": "白ごはん", "nama_en": "Steamed rice", "desc_jp": "国産米", "desc_en": "Japanese rice", "alergi": [], "tag": [] },
-        { "nama_jp": "味噌汁", "nama_en": "Miso soup", "desc_jp": "", "desc_en": "", "alergi": ["小麦"], "tag": [] },
-        { "nama_jp": "焼き鮭", "nama_en": "Grilled salmon", "desc_jp": "", "desc_en": "", "alergi": [], "tag": [] },
-        { "nama_jp": "納豆", "nama_en": "Natto (fermented soybeans)", "desc_jp": "", "desc_en": "", "alergi": [], "tag": [] },
-        { "nama_jp": "卵焼き", "nama_en": "Rolled omelette", "desc_jp": "", "desc_en": "", "alergi": ["卵"], "tag": [] },
-        { "nama_jp": "漬物", "nama_en": "Pickles", "desc_jp": "", "desc_en": "", "alergi": [], "tag": [] }
+        {
+          "nama_jp": "白ごはん",
+          "nama_en": "Steamed rice",
+          "desc_jp": "国産米",
+          "desc_en": "Japanese rice",
+          "alergi": [],
+          "tag": [
+            "ベジタリアン"
+          ]
+        },
+        {
+          "nama_jp": "みそ汁",
+          "nama_en": "Miso soup",
+          "desc_jp": "",
+          "desc_en": "",
+          "alergi": [
+            "小麦"
+          ],
+          "tag": []
+        },
+        {
+          "nama_jp": "鉄砲汁",
+          "nama_en": "Crab miso soup",
+          "desc_jp": "北海道の郷土料理",
+          "desc_en": "Hokkaido local dish",
+          "alergi": [
+            "かに"
+          ],
+          "tag": [
+            "北海道",
+            "名物"
+          ]
+        },
+        {
+          "nama_jp": "焼き鮭",
+          "nama_en": "Grilled salmon",
+          "desc_jp": "",
+          "desc_en": "",
+          "alergi": [],
+          "tag": []
+        },
+        {
+          "nama_jp": "焼き鯖",
+          "nama_en": "Grilled mackerel",
+          "desc_jp": "",
+          "desc_en": "",
+          "alergi": [],
+          "tag": []
+        },
+        {
+          "nama_jp": "納豆",
+          "nama_en": "Natto (fermented soybeans)",
+          "desc_jp": "",
+          "desc_en": "",
+          "alergi": [],
+          "tag": []
+        },
+        {
+          "nama_jp": "生玉子",
+          "nama_en": "Raw egg",
+          "desc_jp": "ごはんにかけてどうぞ",
+          "desc_en": "Pour over rice",
+          "alergi": [
+            "卵"
+          ],
+          "tag": []
+        },
+        {
+          "nama_jp": "だし巻き卵",
+          "nama_en": "Rolled Japanese omelette",
+          "desc_jp": "",
+          "desc_en": "",
+          "alergi": [
+            "卵"
+          ],
+          "tag": []
+        },
+        {
+          "nama_jp": "のり",
+          "nama_en": "Nori seaweed",
+          "desc_jp": "",
+          "desc_en": "",
+          "alergi": [],
+          "tag": []
+        },
+        {
+          "nama_jp": "梅干し",
+          "nama_en": "Pickled plum",
+          "desc_jp": "",
+          "desc_en": "",
+          "alergi": [],
+          "tag": []
+        },
+        {
+          "nama_jp": "塩辛",
+          "nama_en": "Salted squid",
+          "desc_jp": "",
+          "desc_en": "",
+          "alergi": [],
+          "tag": [
+            "北海道"
+          ]
+        },
+        {
+          "nama_jp": "たらこ",
+          "nama_en": "Salted cod roe",
+          "desc_jp": "",
+          "desc_en": "",
+          "alergi": [],
+          "tag": [
+            "北海道"
+          ]
+        },
+        {
+          "nama_jp": "切り干し大根",
+          "nama_en": "Dried daikon strips",
+          "desc_jp": "",
+          "desc_en": "",
+          "alergi": [],
+          "tag": []
+        },
+        {
+          "nama_jp": "酢の物",
+          "nama_en": "Vinegared dish",
+          "desc_jp": "",
+          "desc_en": "",
+          "alergi": [],
+          "tag": []
+        }
+      ]
+    },
+    {
+      "id": "hokkaido",
+      "nama_jp": "海鮮・北海道",
+      "nama_en": "Seafood & Hokkaido",
+      "berubah_harian": false,
+      "items": [
+        {
+          "nama_jp": "ホタテ刺身",
+          "nama_en": "Scallop sashimi",
+          "desc_jp": "オホーツク海産",
+          "desc_en": "From the Sea of Okhotsk",
+          "alergi": [],
+          "tag": [
+            "北海道",
+            "名物"
+          ]
+        },
+        {
+          "nama_jp": "白身魚の刺身",
+          "nama_en": "White fish sashimi",
+          "desc_jp": "",
+          "desc_en": "",
+          "alergi": [],
+          "tag": []
+        },
+        {
+          "nama_jp": "サーモン",
+          "nama_en": "Salmon sashimi",
+          "desc_jp": "",
+          "desc_en": "",
+          "alergi": [],
+          "tag": []
+        },
+        {
+          "nama_jp": "イカとオクラの和え物",
+          "nama_en": "Squid and okra salad",
+          "desc_jp": "",
+          "desc_en": "",
+          "alergi": [],
+          "tag": []
+        },
+        {
+          "nama_jp": "マンダイの焼き物",
+          "nama_en": "Grilled daily fish",
+          "desc_jp": "その日の魚です",
+          "desc_en": "Ask staff for today's fish",
+          "alergi": [],
+          "tag": []
+        }
+      ]
+    },
+    {
+      "id": "tsukemono",
+      "nama_jp": "漬物・薬味",
+      "nama_en": "Pickles & condiments",
+      "berubah_harian": false,
+      "items": [
+        {
+          "nama_jp": "白菜漬け",
+          "nama_en": "Pickled napa cabbage",
+          "desc_jp": "",
+          "desc_en": "",
+          "alergi": [],
+          "tag": []
+        },
+        {
+          "nama_jp": "青がっぱ",
+          "nama_en": "Cucumber pickles",
+          "desc_jp": "",
+          "desc_en": "",
+          "alergi": [],
+          "tag": []
+        },
+        {
+          "nama_jp": "小なす",
+          "nama_en": "Small eggplant pickles",
+          "desc_jp": "",
+          "desc_en": "",
+          "alergi": [],
+          "tag": []
+        },
+        {
+          "nama_jp": "ごぼう漬け",
+          "nama_en": "Pickled burdock",
+          "desc_jp": "",
+          "desc_en": "",
+          "alergi": [],
+          "tag": []
+        },
+        {
+          "nama_jp": "つぼ漬け",
+          "nama_en": "Tsubozuke pickles",
+          "desc_jp": "",
+          "desc_en": "",
+          "alergi": [],
+          "tag": []
+        },
+        {
+          "nama_jp": "らっきょ",
+          "nama_en": "Pickled rakkyo onions",
+          "desc_jp": "",
+          "desc_en": "",
+          "alergi": [],
+          "tag": []
+        },
+        {
+          "nama_jp": "福神漬け",
+          "nama_en": "Fukujinzuke pickles",
+          "desc_jp": "カレーと一緒に",
+          "desc_en": "Great with curry",
+          "alergi": [],
+          "tag": []
+        },
+        {
+          "nama_jp": "ザーサイ",
+          "nama_en": "Pickled mustard greens",
+          "desc_jp": "",
+          "desc_en": "",
+          "alergi": [],
+          "tag": []
+        }
       ]
     },
     {
       "id": "yoshoku",
-      "nama_jp": "洋食",
-      "nama_en": "Western",
+      "nama_jp": "洋食・パン",
+      "nama_en": "Western & Bread",
       "berubah_harian": false,
       "items": [
-        { "nama_jp": "スクランブルエッグ", "nama_en": "Scrambled eggs", "desc_jp": "", "desc_en": "", "alergi": ["卵", "乳"], "tag": [] },
-        { "nama_jp": "ソーセージ", "nama_en": "Sausage", "desc_jp": "", "desc_en": "", "alergi": ["小麦"], "tag": [] },
-        { "nama_jp": "トースト", "nama_en": "Toast", "desc_jp": "バター・ジャム付き", "desc_en": "With butter and jam", "alergi": ["小麦", "乳"], "tag": [] },
-        { "nama_jp": "サラダ", "nama_en": "Salad", "desc_jp": "ドレッシング 2 種", "desc_en": "Two kinds of dressing", "alergi": [], "tag": ["ベジタリアン"] },
-        { "nama_jp": "ヨーグルト", "nama_en": "Yogurt", "desc_jp": "", "desc_en": "", "alergi": ["乳"], "tag": [] },
-        { "nama_jp": "コーンスープ", "nama_en": "Corn soup", "desc_jp": "", "desc_en": "", "alergi": ["乳", "小麦"], "tag": [] }
+        {
+          "nama_jp": "コーンスープ",
+          "nama_en": "Corn soup",
+          "desc_jp": "",
+          "desc_en": "",
+          "alergi": [
+            "乳",
+            "小麦"
+          ],
+          "tag": []
+        },
+        {
+          "nama_jp": "クロワッサン",
+          "nama_en": "Croissant",
+          "desc_jp": "",
+          "desc_en": "",
+          "alergi": [
+            "小麦",
+            "乳"
+          ],
+          "tag": []
+        },
+        {
+          "nama_jp": "ソフトパン",
+          "nama_en": "Soft roll",
+          "desc_jp": "",
+          "desc_en": "",
+          "alergi": [
+            "小麦"
+          ],
+          "tag": []
+        },
+        {
+          "nama_jp": "小判パン",
+          "nama_en": "Small round roll",
+          "desc_jp": "",
+          "desc_en": "",
+          "alergi": [
+            "小麦"
+          ],
+          "tag": []
+        },
+        {
+          "nama_jp": "ミニトースト",
+          "nama_en": "Mini toast",
+          "desc_jp": "",
+          "desc_en": "",
+          "alergi": [
+            "小麦"
+          ],
+          "tag": []
+        },
+        {
+          "nama_jp": "トースト",
+          "nama_en": "Toast",
+          "desc_jp": "バター・ジャム付き",
+          "desc_en": "With butter and jam",
+          "alergi": [
+            "小麦",
+            "乳"
+          ],
+          "tag": []
+        },
+        {
+          "nama_jp": "バゲット",
+          "nama_en": "Baguette",
+          "desc_jp": "",
+          "desc_en": "",
+          "alergi": [
+            "小麦"
+          ],
+          "tag": []
+        },
+        {
+          "nama_jp": "パンケーキ",
+          "nama_en": "Pancake",
+          "desc_jp": "",
+          "desc_en": "",
+          "alergi": [
+            "小麦",
+            "卵",
+            "乳"
+          ],
+          "tag": []
+        },
+        {
+          "nama_jp": "サンドイッチ",
+          "nama_en": "Sandwich",
+          "desc_jp": "",
+          "desc_en": "",
+          "alergi": [
+            "小麦",
+            "卵"
+          ],
+          "tag": []
+        },
+        {
+          "nama_jp": "オムレツ",
+          "nama_en": "Omelette",
+          "desc_jp": "チーズ・ほうれん草・玉ねぎ入り",
+          "desc_en": "With cheese, spinach and onion",
+          "alergi": [
+            "卵",
+            "乳"
+          ],
+          "tag": []
+        },
+        {
+          "nama_jp": "ベーコン",
+          "nama_en": "Bacon",
+          "desc_jp": "",
+          "desc_en": "",
+          "alergi": [],
+          "tag": []
+        },
+        {
+          "nama_jp": "スライスロースハム",
+          "nama_en": "Sliced roast ham",
+          "desc_jp": "",
+          "desc_en": "",
+          "alergi": [],
+          "tag": []
+        },
+        {
+          "nama_jp": "ウインナー",
+          "nama_en": "Sausage",
+          "desc_jp": "",
+          "desc_en": "",
+          "alergi": [],
+          "tag": []
+        },
+        {
+          "nama_jp": "ナゲット",
+          "nama_en": "Chicken nuggets",
+          "desc_jp": "",
+          "desc_en": "",
+          "alergi": [
+            "小麦"
+          ],
+          "tag": []
+        },
+        {
+          "nama_jp": "ハンバーグ",
+          "nama_en": "Hamburger steak",
+          "desc_jp": "",
+          "desc_en": "",
+          "alergi": [
+            "小麦",
+            "卵"
+          ],
+          "tag": []
+        },
+        {
+          "nama_jp": "海鮮かき揚げ",
+          "nama_en": "Seafood tempura fritter",
+          "desc_jp": "",
+          "desc_en": "",
+          "alergi": [
+            "小麦",
+            "えび"
+          ],
+          "tag": []
+        },
+        {
+          "nama_jp": "フライドポテト",
+          "nama_en": "French fries",
+          "desc_jp": "",
+          "desc_en": "",
+          "alergi": [],
+          "tag": [
+            "ベジタリアン"
+          ]
+        },
+        {
+          "nama_jp": "ジャーマンポテト",
+          "nama_en": "German-style potatoes",
+          "desc_jp": "",
+          "desc_en": "",
+          "alergi": [],
+          "tag": [
+            "ベジタリアン"
+          ]
+        },
+        {
+          "nama_jp": "玉ココ",
+          "nama_en": "Corn and egg fry",
+          "desc_jp": "",
+          "desc_en": "",
+          "alergi": [
+            "卵"
+          ],
+          "tag": []
+        }
+      ]
+    },
+    {
+      "id": "salad",
+      "nama_jp": "サラダ・野菜",
+      "nama_en": "Salad & Vegetables",
+      "berubah_harian": false,
+      "items": [
+        {
+          "nama_jp": "ブロッコリー",
+          "nama_en": "Broccoli",
+          "desc_jp": "",
+          "desc_en": "",
+          "alergi": [],
+          "tag": [
+            "ベジタリアン"
+          ]
+        },
+        {
+          "nama_jp": "トマト",
+          "nama_en": "Tomato",
+          "desc_jp": "",
+          "desc_en": "",
+          "alergi": [],
+          "tag": [
+            "ベジタリアン"
+          ]
+        },
+        {
+          "nama_jp": "ミニトマト",
+          "nama_en": "Cherry tomato",
+          "desc_jp": "",
+          "desc_en": "",
+          "alergi": [],
+          "tag": [
+            "ベジタリアン"
+          ]
+        },
+        {
+          "nama_jp": "キャベツ",
+          "nama_en": "Cabbage",
+          "desc_jp": "",
+          "desc_en": "",
+          "alergi": [],
+          "tag": [
+            "ベジタリアン"
+          ]
+        },
+        {
+          "nama_jp": "レタス",
+          "nama_en": "Lettuce",
+          "desc_jp": "",
+          "desc_en": "",
+          "alergi": [],
+          "tag": [
+            "ベジタリアン"
+          ]
+        },
+        {
+          "nama_jp": "蒸し野菜（いも・かぼちゃ）",
+          "nama_en": "Steamed potato and pumpkin",
+          "desc_jp": "せいろ蒸し",
+          "desc_en": "Steamed in a bamboo basket",
+          "alergi": [],
+          "tag": [
+            "ベジタリアン"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dezato",
+      "nama_jp": "デザート",
+      "nama_en": "Dessert",
+      "berubah_harian": false,
+      "items": [
+        {
+          "nama_jp": "アイスクリーム",
+          "nama_en": "Ice cream",
+          "desc_jp": "",
+          "desc_en": "",
+          "alergi": [
+            "乳"
+          ],
+          "tag": []
+        },
+        {
+          "nama_jp": "ケーキ",
+          "nama_en": "Cake",
+          "desc_jp": "日替わり",
+          "desc_en": "Changes daily",
+          "alergi": [
+            "小麦",
+            "卵",
+            "乳"
+          ],
+          "tag": []
+        },
+        {
+          "nama_jp": "フルーツ",
+          "nama_en": "Fruit",
+          "desc_jp": "日替わり",
+          "desc_en": "Changes daily",
+          "alergi": [],
+          "tag": []
+        }
       ]
     },
     {
@@ -88,16 +856,109 @@
       "nama_en": "Drinks",
       "berubah_harian": false,
       "items": [
-        { "nama_jp": "コーヒー", "nama_en": "Coffee", "desc_jp": "ホット／アイス", "desc_en": "Hot / iced", "alergi": [], "tag": [] },
-        { "nama_jp": "紅茶", "nama_en": "Tea", "desc_jp": "ホット／アイス", "desc_en": "Hot / iced", "alergi": [], "tag": [] },
-        { "nama_jp": "オレンジジュース", "nama_en": "Orange juice", "desc_jp": "", "desc_en": "", "alergi": [], "tag": [] },
-        { "nama_jp": "牛乳", "nama_en": "Milk", "desc_jp": "", "desc_en": "", "alergi": ["乳"], "tag": [] },
-        { "nama_jp": "緑茶", "nama_en": "Green tea", "desc_jp": "セルフサービス", "desc_en": "Self service", "alergi": [], "tag": [] }
+        {
+          "nama_jp": "コーヒー",
+          "nama_en": "Coffee",
+          "desc_jp": "ホット／アイス",
+          "desc_en": "Hot / iced",
+          "alergi": [],
+          "tag": []
+        },
+        {
+          "nama_jp": "紅茶",
+          "nama_en": "Tea",
+          "desc_jp": "ホット／アイス",
+          "desc_en": "Hot / iced",
+          "alergi": [],
+          "tag": []
+        },
+        {
+          "nama_jp": "オレンジジュース",
+          "nama_en": "Orange juice",
+          "desc_jp": "",
+          "desc_en": "",
+          "alergi": [],
+          "tag": []
+        },
+        {
+          "nama_jp": "牛乳",
+          "nama_en": "Milk",
+          "desc_jp": "",
+          "desc_en": "",
+          "alergi": [
+            "乳"
+          ],
+          "tag": []
+        },
+        {
+          "nama_jp": "緑茶",
+          "nama_en": "Green tea",
+          "desc_jp": "セルフサービス",
+          "desc_en": "Self service",
+          "alergi": [],
+          "tag": []
+        }
+      ]
+    },
+    {
+      "id": "choumi",
+      "nama_jp": "つゆ・薬味",
+      "nama_en": "Sauces & toppings",
+      "berubah_harian": false,
+      "items": [
+        {
+          "nama_jp": "温つゆ・冷つゆ",
+          "nama_en": "Hot / cold dipping sauce",
+          "desc_jp": "そば・そうめん用",
+          "desc_en": "For soba and somen",
+          "alergi": [
+            "小麦"
+          ],
+          "tag": []
+        },
+        {
+          "nama_jp": "山わさび",
+          "nama_en": "Horseradish",
+          "desc_jp": "北海道産",
+          "desc_en": "Hokkaido grown",
+          "alergi": [],
+          "tag": [
+            "北海道"
+          ]
+        },
+        {
+          "nama_jp": "天かす",
+          "nama_en": "Tempura scraps",
+          "desc_jp": "",
+          "desc_en": "",
+          "alergi": [
+            "小麦"
+          ],
+          "tag": []
+        },
+        {
+          "nama_jp": "あられ・のり",
+          "nama_en": "Rice crackers and nori",
+          "desc_jp": "",
+          "desc_en": "",
+          "alergi": [],
+          "tag": []
+        }
       ]
     }
   ],
   "kurasi": [
-    { "label_jp": "ハラール対応可", "label_en": "Halal-friendly options available", "isian_jp": "スタッフにお申し付けください", "isian_en": "Please ask our staff" },
-    { "label_jp": "ベジタリアン", "label_en": "Vegetarian", "isian_jp": "サラダ・白ごはん・味噌汁など", "isian_en": "Salad, rice, miso soup, etc." }
+    {
+      "label_jp": "ハラール対応可",
+      "label_en": "Halal-friendly options available",
+      "isian_jp": "スタッフにお申し付けください",
+      "isian_en": "Please ask our staff"
+    },
+    {
+      "label_jp": "ベジタリアン",
+      "label_en": "Vegetarian",
+      "isian_jp": "サラダ・白ごはん・みそ汁・蒸し野菜など",
+      "isian_en": "Salad, rice, miso soup, steamed vegetables"
+    }
   ]
 }
